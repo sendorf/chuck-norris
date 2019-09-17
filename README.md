@@ -1,24 +1,16 @@
-# README
+# Chuck Norris facts
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hay que desarrollar un buscador de facts de Chuck Norris que se obtienen de la API https://api.chucknorris.io/
 
-Things you may want to cover:
+El buscador tendrá las siguientes características:
+* No necesita login, es abierto.
+* Se permitirá buscar por:
+** Palabras.
+** Categorías.
+** De manera aleatoria.
+* Los resultados se mostrarán paginados.
+* Cada búsqueda junto con los resultados obtenidos se guardarán en base de datos.
+* Existirá la opción de introducir una cuenta de email para que se envíen los resultados de la búsqueda.
+* La aplicación estará disponible en castellano e inglés (los contenidos extraídos de la API no es necesario traducirlos, se pueden presentar en inglés).
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+La estructura y el diseño de la página y de los correos son completamente libres, al igual que el modelo de datos para guardar la información. Se puede añadir cualquier otra funcionalidad o mejora que se considere.
