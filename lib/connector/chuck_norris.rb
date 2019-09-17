@@ -19,8 +19,7 @@ module Connector
       def query(query)
         jokes = []
         joke_ids = []
-        api_jokes = JSON.parse(get("#{BASE_URL}search?query=#{CGI.escape(query)}"))['result']
-        api_jokes.each do |api_joke|
+        JSON.parse(get("#{BASE_URL}search?query=#{CGI.escape(query)}"))['result'].each do |api_joke|
           joke = find_create_joke(api_joke)
           joke_ids << joke.id
           jokes << joke
@@ -29,6 +28,12 @@ module Connector
         search.joke_ids = joke_ids
         search.save!
         jokes
+      end
+
+      def categories
+        JSON.parse(get("#{BASE_URL}categories")).each do |category|
+          Category.find_or_create_by(value: category)
+        end
       end
 
       private
