@@ -17,17 +17,15 @@ module Connector
       end
 
       def query(query)
-        jokes = []
         joke_ids = []
         JSON.parse(get("#{BASE_URL}search?query=#{CGI.escape(query)}"))['result'].each do |api_joke|
           joke = find_create_joke(api_joke)
           joke_ids << joke.id
-          jokes << joke
         end
         search = Search.find_or_create_by(query: query)
         search.joke_ids = joke_ids
         search.save!
-        jokes
+        search
       end
 
       def categories

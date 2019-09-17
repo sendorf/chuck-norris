@@ -1,0 +1,6 @@
+<h1> Results </h1>
+<ul class="list-group">
+  <% @search.jokes.each do |joke|%>
+    <li class="list-group-item"><%= joke.body %></li>
+  <% end %>
+</ul>

@@ -3,7 +3,7 @@
 <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 <html>
   <head>
-    <title>ChuckNorris</title>
+    <title>Chuck Norris</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,6 +12,10 @@
   </head>
 
   <body>
+    <!-- As a link -->
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="/">Chuck Norris</a>
+    </nav>
     <%= yield %>
   </body>
 </html>
