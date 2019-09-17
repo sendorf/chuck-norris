@@ -1,2 +1,9 @@
+AllCops:
+  Exclude:
+    - './db/**'
+
 Metrics/LineLength:
   Max: 120
+
+Metrics/MethodLength:
+  Max: 25
