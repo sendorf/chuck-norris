@@ -1,4 +1,4 @@
-<h2> Select a random Joke from a category</h2>
+<h2> <%= I18n.t('searches.new.title')%></h2>
 <br>
 <table class="table">
   <tbody>
@@ -19,15 +19,15 @@
 </table>
 <br>
 
-<a href='/jokes/random' type="button" class="btn btn-primary">Random Joke</a>
+<a href='/jokes/random' type="button" class="btn btn-primary"><%= I18n.t('searches.new.random_joke')%></a>
 
 <br>
 
 
 <%= form_with model: @search, url: "/searches" do %>
   <div class="form-group">
-    <%= label_tag(:q, "Search jokes:", class: 'col-sm-2 col-form-label',for: 'query') %>
+    <%= label_tag(:q, I18n.t('searches.new.search_jokes'), class: 'col-sm-2 col-form-label',for: 'query') %>
     <%= text_field_tag :q, '', class: 'form-control col-sm-5', id: 'query' %>
-    <button type="submit" class="btn btn-primary">Search</button>
+    <button type="submit" class="btn btn-primary"><%= I18n.t('searches.new.search')%></button>
   </div>
 <% end %>

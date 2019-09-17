@@ -29,12 +29,12 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
-en:
+es:
   searches:
     new:
-      search_jokes: 'Search Jokes:'
-      random_joke: 'Random Joke'
-      search: Search
-      title: Select a random joke from a category
+      search_jokes: 'Buscar Chistes:'
+      random_joke: 'Chiste Aleatorio'
+      search: Buscar
+      title: Elige una broma aleatoria de una de estas categorías
     show:
-      results: Results
+      results: Resultados
